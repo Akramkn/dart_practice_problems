@@ -6,5 +6,8 @@ void main() {
 
     case >= 31 && <= 50:
       print("grade D");
+
+    case >= 40 && <= 90:
+      print("Grade C");
   }
 }
