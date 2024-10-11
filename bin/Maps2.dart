@@ -84,25 +84,33 @@ void main() {
   var sortedProd = Map.fromEntries(extractedProd);
   print("sorted products in ascending order: $sortedProd");
 
-  // print("\nWorking with a List of Maps:");
-  // List<Map<String, dynamic>> productsList = [
-  //   {"name": "Akram", "price": 1200, "quantity": 5},
-  //   {"name": "Phone", "price": 800, "quantity": 10},
-  //   {"name": "Tablet", "price": 600, "quantity": 8}
-  // ];
-  // for (var product in productsList) {
-  //   print(product);
-  // }
-  // print("\n");
-  // productsList.add({'name': 'Headphones', 'price': 150, 'quantity': 15});
-  // for (var product in productsList) {
-  //   print(product);
-  // }
+// **Task**: Write a Dart program that manages a list of maps
+// where each map contains information about a product
+// (`name`, `price`, `quantity`). The program should:
+// - Add a new product to the list.
+// - Find a product by its name.
+// - Sort the products by price.
 
-  // print("sorting by price:");
-  // // productsList.sort((a, b) => a["price"].compareTo(b["price"]));
+  print("\nWorking with a List of Maps:");
+  List<Map<String, dynamic>> productsList = [
+    {"name": "Akram", "price": 1200, "quantity": 5},
+    {"name": "Phone", "price": 800, "quantity": 10},
+    {"name": "Tablet", "price": 600, "quantity": 8}
+  ];
+  for (var product in productsList) {
+    print(product);
+  }
+  print("\n");
+  productsList.add({'name': 'Headphones', 'price': 150, 'quantity': 15});
+  for (var product in productsList) {
+    print(product);
+  }
+
+  print("sorting by price:");
   // productsList.sort((a, b) => a["price"].compareTo(b["price"]));
-  // for (var product in productsList) {
-  //   print(product);
-  // }
+
+  productsList.sort((a, b) => (a["price"] as num).compareTo(b["price"]));
+  for (var product in productsList) {
+    print(product);
+  }
 }
