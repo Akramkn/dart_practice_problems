@@ -106,8 +106,8 @@ void main() {
     print(product);
   }
 
-  print("sorting by price:");
-  // productsList.sort((a, b) => a["price"].compareTo(b["price"]));
+  // print("sorting by price:");
+  //  productsList.sort((a, b) => a["price"].compareTo(b["price"]));
 
   productsList.sort((a, b) => (a["price"] as num).compareTo(b["price"]));
   for (var product in productsList) {
