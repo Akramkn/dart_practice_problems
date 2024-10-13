@@ -100,15 +100,21 @@ void main() {
   for (var product in productsList) {
     print(product);
   }
-  print("\n");
+  print("\nAdding new product to the list:");
   productsList.add({'name': 'Headphones', 'price': 150, 'quantity': 15});
   for (var product in productsList) {
     print(product);
   }
 
+  print("\nfind a product by its name:");
+  for (var i = 0; i < productsList.length; i++) {
+    if (productsList[i]["name"] == "Headphones") {
+      print(productsList[i]["name"]);
+    }
+  }
   // print("sorting by price:");
   //  productsList.sort((a, b) => a["price"].compareTo(b["price"]));
-
+  print("\nSorting the products by price:");
   productsList.sort((a, b) => (a["price"] as num).compareTo(b["price"]));
   for (var product in productsList) {
     print(product);
