@@ -5,5 +5,9 @@ void main() {
   print(list2);
 
   //Collection if:
-  
+  bool promoActive = false;
+  var nav = ["Home", "Furniture", "Plants", if (promoActive) "Outlet"];
+  print(nav);
 }
+
+//Collection if using case:
