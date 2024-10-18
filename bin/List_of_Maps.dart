@@ -42,6 +42,31 @@ void main() {
   inventory["Mangoes"] = 60;
   print(inventory);
 
+  //counting Word Frequencies:
+  print("counting Word Frequencies:");
+  var words = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+  print(wordFreq(words));
 
+  print("*Merging Maps**:");
+  Map<int, String> map1 = {1: "One", 2: "Two", 3: "Three"};
+  Map<int, String> map2 = {4: "Four", 5: "Five", 3: "Three"};
 
+  Map<int, String> mergedMap = {...map1, ...map2};
+  print(mergedMap);
+  // if map1 and map2 have the same overlapping keys,
+  // then it will just print the map2 keys and map1's
+  // key will not be printed.
+}
+
+//function of counting frequency:
+Map<String, dynamic> wordFreq(var list) {
+  Map<String, int> frequency = {};
+  for (var i in list) {
+    if (frequency.containsKey(i)) {
+      frequency[i] = frequency[i]! + 1;
+    } else {
+      frequency[i] = 1;
+    }
+  }
+  return frequency;
 }
